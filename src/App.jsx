@@ -2,6 +2,7 @@ import React from "react";
 import { Navbar }from './components/Navbar/Navbar'
 
 import './styles/App.css';
+import { Article } from "./components/article/Article";
 
 
 // Componente em classe é uma classe que herda uma classe Component do React e 
@@ -10,8 +11,18 @@ import './styles/App.css';
 class App extends React.Component {
     
     render() {
-        return <Navbar />;
-            
+        return( 
+        <>
+            <Navbar />
+
+            <section id="articles">
+            <Article title='Exemplo 1' />
+            <Article title='Exemplo 2' />
+            <Article title='Exemplo 3' />
+            <Article title='Exemplo 4' />
+            </section>
+        </>
+        );   
     }
 }
 
